@@ -9,6 +9,7 @@ body {
     align-items: center;
     min-height: 98vh;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 
 .container {
@@ -32,6 +33,10 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
+}
+.action-button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }
 
 .value-button {
@@ -65,7 +70,7 @@ h1 {
 }
 
 .value-button.symbol.selected {
-    background-color: #8e44ad;
+    background-color: #37b987;
     box-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
 }
 
@@ -92,13 +97,38 @@ button.action-button:disabled {
 }
 
 .hour-display {
-    font-size: 120px;
+    font-size: 300px;
     font-weight: bold;
-    margin: 60px 0;
+    margin: 20px 0;
     color: #2c3e50;
     filter: blur(20px);
     transition: filter 0.5s;
     user-select: none;
+}
+@media screen and (max-width: 1025px) {
+    .hour-display {
+        font-size: 280px;
+    }
+}
+@media screen and (max-width: 825px) {
+    .hour-display {
+        font-size: 280px;
+    }
+}
+@media screen and (max-width: 525px) {
+    .hour-display {
+        font-size: 200px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .hour-display {
+        font-size: 160px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .hour-display {
+        font-size: 120px;
+    }
 }
 
 .hour-display-container {
@@ -133,6 +163,7 @@ button.action-button:disabled {
 .show-btn {
     background-color: #2ecc71;
     font-size: 20px;
+    font-weight: 600;
     border-radius: 5px;
     width: 200px;
     height: 45px;
@@ -140,6 +171,18 @@ button.action-button:disabled {
 }
 
 .show-btn:hover {
+    background-color: #27ae60;
+}
+
+.loop-btn {
+    background-color: #9341ca;
+    border-radius: 5px;
+    height: 45px;
+    border: 1px gray solid;
+    width: 10%;
+}
+
+.loop-btn:hover {
     background-color: #27ae60;
 }
 #goToPlanning {
@@ -192,7 +235,7 @@ body.dark-mode .value-button:hover {
 }
 
 body.dark-mode .value-button.selected {
-    background-color: #27ae60;
+    background-color: #9341ca;
     box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
 }
 

@@ -122,3 +122,15 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function (
         button.textContent = '🦇'; // Lua para modo claro
     }
 });
+
+// Loop para o valor
+document.getElementById('loopButton').addEventListener('click', function () {
+    const hourDisplay = document.getElementById('hourDisplay');
+
+    // Toggle the upside-down transformation
+    if (hourDisplay.style.transform === 'rotate(180deg)') {
+        hourDisplay.style.transform = 'rotate(0deg)'; // Reset to normal
+    } else {
+        hourDisplay.style.transform = 'rotate(180deg)'; // Turn upside down
+    }
+});
